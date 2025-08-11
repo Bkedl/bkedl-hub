@@ -24,8 +24,10 @@ function App() {
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
-              <li className="nav-item"><Link className="nav-link" to="/Skills">Skills</Link></li>
+              <ul className="navbar-nav ms-auto">
+  <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
+  {/* <li className="nav-item"><Link className="nav-link" to="/skills">Skills</Link></li> */}
+</ul>
             </ul>
           </div>
         </div>
@@ -34,8 +36,8 @@ function App() {
       <div className="container mt-4">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<List />} />
-          <Route path="/skills/:skillName" element={<Details />} />
+          {/* <Route path="/skills" element={<List />} /> */}
+          <Route path="/skills/:skillName" element={<Details />} /> 
         </Routes>
       </div>
     </Router>
