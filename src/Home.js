@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { skills } from './data';
 import QuoteRotator from './QuoteRotator';
+import './styles.css'
 
 function Home() {
   return (
@@ -20,8 +21,7 @@ function Home() {
             <Link
               key={skill.name}
               to={`/skills/${skill.name.toLowerCase()}`}
-              className="btn btn-outline-primary"
-              style={{ minWidth: '120px', textAlign: 'center' }}
+              className="btn btn-outline-primary, skill-button"
               title={skill.description}
             >
               {skill.name}

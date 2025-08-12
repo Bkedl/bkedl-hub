@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { skills } from './data';
-
-// NB: take this out and put on mainpage as I do not want this as a seprate section
+import './styles.css'
 
 function SkillsList() {
   return (
@@ -13,8 +12,7 @@ function SkillsList() {
           <Link
             key={skill.name}
             to={`/skills/${skill.name.toLowerCase()}`}
-            className="btn btn-outline-primary"
-            style={{ minWidth: '120px', textAlign: 'center' }}
+            className="btn btn-outline-primary skill-button"
             title={skill.description}
           >
             {skill.name}
