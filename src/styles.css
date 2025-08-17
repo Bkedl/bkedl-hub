@@ -17,16 +17,26 @@
 }
 
 .home-footer {
-  width: 100vw; /* full browser width, not just parent width */
-  margin-left: calc(-50vw + 50%); /* removes any container padding/margins */
-  height: 250px; 
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); 
+  height: 375px; 
   display: flex;
   align-items: flex-end;
-  background-color: #000000; /* optional */
+  background-color: #000000; 
 }
 
 .home-footer {
   background-color: #000000;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;          
+  overflow-x: hidden;    
+  overflow-y: hidden;    
+  background-color: #000;
+  color: #fff;
 }
 
 /* index.js */
@@ -36,4 +46,148 @@
 .skill-button {
   min-width: 120px;
   text-align: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #c5ccce;               /* Nice blue color */
+  background-color: transparent;
+  border: 2px solid #c5ccce;
+  border-radius: 30px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: border-color 0.3s ease-in-out, border-width 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.skill-button:hover,
+.skill-button:focus {
+  border-color: #944dd2;       
+  color: #944dd2;              
+  background-color: black;     
+  outline: none;
+  text-decoration: none;
+}
+
+
+/* NavBar */
+
+.custom-navbar {
+  background: #000; 
+  padding: 0.5rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #944dd2;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: #ababab;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #944dd2;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #944dd2;
+}
+
+.nav-link:focus {
+ outline: none;     
+  box-shadow: none;  
+}
+
+
+.nav-link:hover::after,
+.nav-link:active::after {
+  width: 100%;
+}
+
+.nav-link:focus::after {
+  width: 0;      
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: " ▼";
+  font-size: 0.6rem;
+  margin-left: 0.2rem;
+  color: #944dd2;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;           
+  left: auto;          
+  background: rgb(0, 0, 0);
+  color: #ababab;
+  border-radius: 0.25rem;
+  box-shadow: 0 6px 12px rgba(195, 172, 172, 0.1);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #ababab;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #944dd2;
+  color: #e3e3e3;
 }

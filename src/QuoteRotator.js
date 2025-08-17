@@ -1,19 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import quotes from './quotes';
+import React, { useState, useEffect } from "react";
+import quotes from "./quotes";
 
 function QuoteRotator() {
   const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prevIndex => (prevIndex + 1) % quotes.length);
-    }, 5000); // change every 5 second
+    const fadeOutTimeout = setTimeout(() => setFade(false), 3000);
+    const changeQuoteTimeout = setTimeout(() => {
+      setIndex((prev) => (prev + 1) % quotes.length);
+      setFade(true);
+    }, 3500); // switch quote after 3.5s
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      clearTimeout(fadeOutTimeout);
+      clearTimeout(changeQuoteTimeout);
+    };
+  }, [index]);
 
   return (
-    <blockquote className="blockquote text-center my-4">
+    <blockquote
+      className="blockquote text-center my-4 quote-rotator"
+      style={{
+        opacity: fade ? 1 : 0,
+        transition: "opacity 0.5s ease-in-out",
+        minHeight: "3em", 
+      }}
+    >
       <p className="mb-0">{quotes[index]}</p>
     </blockquote>
   );
