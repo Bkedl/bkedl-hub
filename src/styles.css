@@ -49,25 +49,42 @@ html, body {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
-  color: #c5ccce;               /* Nice blue color */
-  background-color: transparent;
-  border: 2px solid #c5ccce;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #ccc;
   border-radius: 30px;
-  transition: background-color 0.5s ease, color 0.5s ease;
-  transition: border-color 0.3s ease-in-out, border-width 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
   user-select: none;
+  outline: none; 
+  transition: 
+    border-color 0.3s ease-in-out, 
+    color 0.3s ease-in-out, 
+    background-color 0.3s ease-in-out;
 }
 
 .skill-button:hover,
-.skill-button:focus {
-  border-color: #944dd2;       
-  color: #944dd2;              
-  background-color: black;     
+.skill-button:focus,
+.skill-button:active {
+  border-color: #944dd2;
+  color: #944dd2;
+  background-color: black;
   outline: none;
   text-decoration: none;
 }
 
+
+/* Overview */
+.overview-container {
+  max-height: 5em;      
+  overflow-y: auto;      
+  padding: 0.75rem 1rem; 
+  background-color: #111; 
+  color: #fff;            
+  border-radius: 8px;
+  border: 1px solid #944dd2;
+  line-height: 1.5;
+  font-size: 1rem;
+}
 
 /* NavBar */
 
@@ -190,4 +207,30 @@ html, body {
 .dropdown-item:focus {
   background-color: #944dd2;
   color: #e3e3e3;
+}
+
+/* Project cards */
+
+.card {
+  background-color: #000;  
+  border: none;     
+  color: #fff;      
+  box-shadow: #ababab;        
+}
+
+.card-body {
+  background-color: inherit; 
+  color: #fff;               
+}
+
+.card a.btn-outline-secondary {
+  color: #fff;                     
+  border-color: #944dd2;           
+}
+
+.card a.btn-outline-secondary:hover,
+.card a.btn-outline-secondary:focus {
+  background-color: #944dd2;       
+  color: #fff;                     
+  border-color: #944dd2;
 }

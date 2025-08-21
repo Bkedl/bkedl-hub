@@ -1,49 +1,50 @@
 export const skills = [
-  { 
-    name: 'JavaScript', 
-    description: 'Projects showcasing JavaScript skills',
-    projects: ['tradecard', 'task-manager']
-  },
-  { 
-    name: 'Python', 
-    description: 'Python projects and workflows',
-    projects: ['data-analysis', 'python-BE']
+  {
+    name: "JavaScript",
+    description: "Projects showcasing JavaScript skills",
+    projects: ["tradecard", "repo bkedl"],
   },
   {
-    name: 'SQL',
-    description: 'SQL databases and queries',
-    projects: ['Database', 'TRADEcard']
+    name: "Java",
+    description: "Projects showcasing Java skills",
+    projects: ["tradecard", "repo bkedl"],
   },
   {
-    name: 'Power BI',
-    description: 'Power BI dashboards and reports',
-    projects: ['sales-dashboard', 'marketing-report']
+    name: "Python",
+    description: "Projects showcasing Python skills",
+    projects: ["data-analysis uni project", "charger scout"],
+  },
+  {
+    name: "SQL",
+    description: "Projects showcasing SQL skills",
+    projects: ["Database", "TRADEcard"],
+  },
+  {
+    name: "Power BI",
+    description: "Projects showcasing Power BI skills",
+    projects: ["sales-dashboard", "marketing-report"],
+  },
+  {
+    name: "Cloud",
+    description: "Projects showcasing Cloud skills ",
+    projects: ["sales-dashboard"],
+  },
+  {
+    name: "Alteryx",
+    description: "Projects showcasing Alteryx skills",
+    projects: ["sales-dashboard", "marketing-report"],
   },
 ];
 
-
 export const projects = {
-  'tradecard': {
-    title: 'Pokemon Trading Website',
-    githubUrl: 'https://github.com/bkedl/tradecard',
-    overview: 'A node.js and ... app',
-    writeup: `
-      ## Overview
-      loreipsum... Describe using 2k words 
-      
-      ## Components
-      - Type: 
-      - Pokemon:
-      - Filters: Filter cards by category etc etc
-
-      ## Why React?
-      
-    `,
+  tradecard: {
+    title: "Pokemon Trading Website",
+    githubUrl: "https://github.com/bkedl/tradecard",
+    repoName: "tradecard",
   },
-  'task-manager': {
-    title: 'Task Manager',
-    githubUrl: 'https://github.com/bkedl/task-manager',
-    overview: 'overview',
-    writeup: `Write up here`,
+  "task-manager": {
+    title: "BkedlHub",
+    githubUrl: "https://github.com/bkedl/react-bkdel-repos",
+    repoName: "react-bkdel-repos",
   },
 };
