@@ -2,49 +2,64 @@ export const skills = [
   {
     name: "JavaScript",
     description: "Projects showcasing JavaScript skills",
-    projects: ["tradecard", "repo bkedl"],
+    projects: ["tradecard", "bkedlhub"],
   },
   {
     name: "Java",
     description: "Projects showcasing Java skills",
-    projects: ["tradecard", "repo bkedl"],
+    projects: ["sustainopoly"],
   },
   {
     name: "Python",
     description: "Projects showcasing Python skills",
-    projects: ["data-analysis uni project", "charger scout"],
+    projects: ["supermarketAnalysis", "goodreads"],
   },
   {
     name: "SQL",
     description: "Projects showcasing SQL skills",
-    projects: ["Database", "TRADEcard"],
-  },
-  {
-    name: "Power BI",
-    description: "Projects showcasing Power BI skills",
-    projects: ["sales-dashboard", "marketing-report"],
+    projects: ["databaseRecreation", "tradecard"],
   },
   {
     name: "Cloud",
     description: "Projects showcasing Cloud skills ",
-    projects: ["sales-dashboard"],
-  },
-  {
-    name: "Alteryx",
-    description: "Projects showcasing Alteryx skills",
-    projects: ["sales-dashboard", "marketing-report"],
+    projects: ["ipChecker"],
   },
 ];
 
 export const projects = {
   tradecard: {
-    title: "Pokemon Trading Website",
+    title: "Tradecard",
     githubUrl: "https://github.com/bkedl/tradecard",
     repoName: "tradecard",
   },
-  "task-manager": {
+  bkedlhub: {
     title: "BkedlHub",
     githubUrl: "https://github.com/bkedl/react-bkdel-repos",
     repoName: "react-bkdel-repos",
+  },
+  sustainopoly: {
+    title: "Sustainopoly",
+    githubUrl: "https://github.com/bkedl/sustainopoly",
+    repoName: "sustainopoly",
+  },
+  supermarketAnalysis: {
+    title: "Supermarket Analysis",
+    githubUrl: "https://github.com/bkedl/companies-house-analysis",
+    repoName: "companies-house-analysis",
+  },
+  goodreads: {
+    title: "Goodreads Sandbox",
+    githubUrl: "https://github.com/bkedl/goodreads-sandbox",
+    repoName: "goodreads-sandbox",
+  },
+  databaseRecreation: {
+    title: "Reverse Engineering",
+    githubUrl: "https://github.com/bkedl/database-recreation",
+    repoName: "database-recreation",
+  },
+  ipChecker: {
+    title: "IP Checker",
+    githubUrl: "https://github.com/bkedl/ip-address-checker",
+    repoName: "ip-address-checker",
   },
 };
