@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-bkdel-repos/static/css/main.23cb0530.css",
+    "main.js": "/react-bkdel-repos/static/js/main.90413eb3.js",
+    "index.html": "/react-bkdel-repos/index.html",
+    "main.23cb0530.css.map": "/react-bkdel-repos/static/css/main.23cb0530.css.map",
+    "main.90413eb3.js.map": "/react-bkdel-repos/static/js/main.90413eb3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23cb0530.css",
+    "static/js/main.90413eb3.js"
+  ]
+}
