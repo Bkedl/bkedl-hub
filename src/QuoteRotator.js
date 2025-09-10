@@ -6,11 +6,11 @@ function QuoteRotator() {
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    const fadeOutTimeout = setTimeout(() => setFade(false), 3000);
+    const fadeOutTimeout = setTimeout(() => setFade(false), 1500);
     const changeQuoteTimeout = setTimeout(() => {
       setIndex((prev) => (prev + 1) % quotes.length);
       setFade(true);
-    }, 3500); // switch quote after 3.5s
+    }, 2000);
 
     return () => {
       clearTimeout(fadeOutTimeout);
@@ -24,10 +24,10 @@ function QuoteRotator() {
       style={{
         opacity: fade ? 1 : 0,
         transition: "opacity 0.5s ease-in-out",
-        minHeight: "3em", 
+        minHeight: "3em",
       }}
     >
-      <p className="mb-0">{quotes[index]}</p>
+      <p className="mb-0 fst-italic">{quotes[index]}</p>
     </blockquote>
   );
 }

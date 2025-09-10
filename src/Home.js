@@ -14,11 +14,13 @@ function Home() {
         <h1 className="display-4 fw-bold">Pick a Skill. See the Code.</h1>
 
         {/* Quote Rotator */}
-        <QuoteRotator />
+        <div className="mt-5 fst-italic">
+          <QuoteRotator />
+        </div>
 
         {/* Skills Section */}
         <section>
-          <h2 className="mt-5 mb-4 fw-semibold">Select a Language or Tool</h2>
+          <h2 className="mt-1 mb-4 fw-semibold">Select a Language or Tool</h2>
           <p className="text-secondary mb-4">
             Click below to explore my repositories and experience with each
             technology.
