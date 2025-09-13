@@ -3,27 +3,37 @@ import quotes from "./quotes";
 
 function QuoteRotator() {
   const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [fade, setFade] = useState(false);
 
   useEffect(() => {
-    const fadeOutTimeout = setTimeout(() => setFade(false), 1500);
-    const changeQuoteTimeout = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % quotes.length);
-      setFade(true);
-    }, 2000);
+    setFade(true);
 
-    return () => {
-      clearTimeout(fadeOutTimeout);
-      clearTimeout(changeQuoteTimeout);
+    const cycle = () => {
+      const fadeOutTimeout = setTimeout(() => setFade(false), 1000);
+
+      const changeQuoteTimeout = setTimeout(() => {
+        setIndex((prev) => (prev + 1) % quotes.length);
+        setFade(true);
+        cycle();
+      }, 2000);
+
+      return () => {
+        clearTimeout(fadeOutTimeout);
+        clearTimeout(changeQuoteTimeout);
+      };
     };
-  }, [index]);
+
+    const cleanup = cycle();
+
+    return cleanup;
+  }, []);
 
   return (
     <blockquote
       className="blockquote text-center my-4 quote-rotator"
       style={{
         opacity: fade ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
+        transition: "opacity 1s ease-in-out",
         minHeight: "3em",
       }}
     >
